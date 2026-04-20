@@ -9,7 +9,7 @@ export default function Region() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("/api/regions") // ✅ FIXED
+    axios.get("/api/regions")
       .then(res => setRegions(res.data))
       .catch(err => console.error(err))
       .finally(() => setLoading(false));
@@ -18,7 +18,7 @@ export default function Region() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-100 pt-20 px-4">
 
-      {/* Header */}
+     
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function Region() {
             <table className="min-w-full text-sm text-left">
 
               <thead>
-                <tr className="bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700">
+                <tr className="bg-gradient-to-r from-blue-100 to-purple-100 text-black">
                   <th className="px-4 py-3 font-semibold">ID</th>
                   <th className="px-4 py-3 font-semibold">Region Name</th>
                 </tr>
@@ -70,7 +70,7 @@ export default function Region() {
                     whileHover={{ scale: 1.02 }}
                     className="border-b hover:bg-gray-50 transition"
                   >
-                    <td className="px-4 py-3 font-medium">
+                    <td className="px-4 py-3 text-black font-medium">
                       {region.region_id}
                     </td>
 

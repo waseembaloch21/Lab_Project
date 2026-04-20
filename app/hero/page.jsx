@@ -49,7 +49,7 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      {/* FEATURES */}
+      
       <section className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-3 gap-8">
         {[
           {
@@ -81,7 +81,7 @@ export default function Hero() {
         ))}
       </section>
 
-      {/* ERD PREVIEW */}
+      
       <section className="max-w-6xl mx-auto px-4 py-20 text-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -112,7 +112,7 @@ export default function Hero() {
         </Link>
       </section>
 
-      {/* FINAL CTA */}
+     
       <section className="text-center py-20 px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -126,7 +126,9 @@ export default function Hero() {
           <p className="text-gray-600 mt-4">
             Explore your HR system with powerful tools and clean design.
           </p>
-
+           <p className="text-gray-600 mt-4">
+         &copy; {new Date().getFullYear()} Waseem Baloch. All rights reserved.
+           </p>
           <Link
             href="/employees"
             className="inline-block mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:scale-105 transition"

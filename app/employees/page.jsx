@@ -9,7 +9,7 @@ export default function Employees() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("/api/employees") // ✅ FIXED
+    axios.get("/api/employees")
       .then(res => setEmployees(res.data))
       .catch(err => console.error(err))
       .finally(() => setLoading(false));
@@ -18,7 +18,7 @@ export default function Employees() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-100 pt-20 px-4">
 
-      {/* Header */}
+
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export default function Employees() {
         </p>
       </motion.div>
 
-      {/* Card */}
+     
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -40,7 +40,7 @@ export default function Employees() {
         className="max-w-7xl mx-auto bg-white/70 backdrop-blur-xl shadow-2xl rounded-3xl p-4 md:p-6 border border-gray-200"
       >
 
-        {/* Loading */}
+       
         {loading ? (
           <div className="text-center py-10 text-gray-600">
             Loading employees...
@@ -54,7 +54,7 @@ export default function Employees() {
           <div className="overflow-x-auto">
             <table className="min-w-full text-sm text-left">
 
-              {/* Head */}
+             
               <thead>
                 <tr className="bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700">
                   {[
@@ -68,8 +68,8 @@ export default function Employees() {
                 </tr>
               </thead>
 
-              {/* Body */}
-              <tbody>
+             
+              <tbody className="text-black">
                 {employees.map((emp, index) => (
                   <motion.tr
                     key={emp.employee_id}
